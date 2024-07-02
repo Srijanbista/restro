@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import ContactRibbon from "@/components/ContactRibbon";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,9 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className="relative">
+        <ContactRibbon />
         <Navbar />
-        {children}
+        <section className="overflow-y-auto">{children}</section>
       </body>
     </html>
   );
