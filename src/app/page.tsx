@@ -23,7 +23,7 @@ export default function Home() {
       <section className="h-screen py-32">
         <Container className="flex flex-col gap-y-8 lg:gap-y-16">
           <p className="text-center text-3xl">Browser Our Menu</p>
-          <div className="flex justify-between"></div>
+          <div className="flex justify-between">Cards here</div>
         </Container>
       </section>
     </main>
