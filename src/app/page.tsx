@@ -1,6 +1,37 @@
 import Container from "@/components/Container";
+import HighlightCard from "@/components/HighlightCard";
+import { BsCupHot } from "react-icons/bs";
+import { LuDessert } from "react-icons/lu";
+import { PiBowlFood } from "react-icons/pi";
+import { RiDrinksLine } from "react-icons/ri";
 
 export default function Home() {
+  const HighLightCardData = [
+    {
+      title: "Breakfast",
+      description:
+        "Start your day with our delicious breakfast options, including fresh pastries, hearty omelets, and invigorating smoothies.",
+      icon: <BsCupHot className="h-16 w-16" />,
+    },
+    {
+      title: "Main Dishes",
+      description:
+        "Savor our main courses, featuring succulent meats, fresh seafood, and vegetarian delights, crafted to perfection.",
+      icon: <PiBowlFood className="h-16 w-16" />,
+    },
+    {
+      title: "Drinks",
+      description:
+        "Refresh with our diverse drink menu, offering cocktails, fine wines, craft beers, and non-alcoholic beverages.",
+      icon: <RiDrinksLine className="h-16 w-16" />,
+    },
+    {
+      title: "Desserts",
+      description:
+        "Indulge in our decadent desserts, from creamy cheesecakes to rich chocolate delights and fruity sorbets.",
+      icon: <LuDessert className="h-16 w-16" />,
+    },
+  ];
   return (
     <main>
       {/* Hero Section */}
@@ -20,12 +51,18 @@ export default function Home() {
       </section>
 
       {/* Menu Section */}
-      <section className="h-screen py-32">
-        <Container className="flex flex-col gap-y-8 lg:gap-y-16">
-          <p className="text-center text-3xl">Browser Our Menu</p>
-          <div className="flex justify-between">Cards</div>
-        </Container>
-      </section>
+      {HighLightCardData.length > 0 && (
+        <section className="h-screen py-32">
+          <Container className="flex flex-col gap-y-8 lg:gap-y-16">
+            <p className="text-center text-5xl">Browse Our Menu</p>
+            <div className="grid xl:grid-cols-4 gap-x-2 xl:gap-x-6 gap-y-2 xl:gap-y-6 ">
+              {HighLightCardData.map((item) => {
+                return <HighlightCard {...item} key={crypto.randomUUID()} />;
+              })}
+            </div>
+          </Container>
+        </section>
+      )}
     </main>
   );
 }

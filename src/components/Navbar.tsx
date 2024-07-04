@@ -62,7 +62,7 @@ const Navbar = () => {
               <Link href={item.link}>{item.title}</Link>
             </li>
           ))}
-          <button className="text-2xl font-medium px-4 py-2 hover:text-white hover:bg-slate-800 rounded-xl text-slate-800 transition-colors duration-300 ease-in-out">
+          <button className="text-2xl font-medium px-6 py-3 text-white bg-slate-800 rounded-md hover:text-gray-200 shadow-md hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-105">
             Book A Table
           </button>
         </ul>
