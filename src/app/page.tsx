@@ -11,7 +11,7 @@ export default function Home() {
             <p className="text-7xl ">
               Best food for <br /> your taste
             </p>
-            <p className="text-sm">
+            <p className="text-sm font-medium">
               Discover delectable cuisine and unforgettable moments <br /> in
               our welcoming, culinary haven.
             </p>
