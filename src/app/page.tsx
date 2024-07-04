@@ -6,8 +6,8 @@ export default function Home() {
       {/* Hero Section */}
       <section className="bg-[url('/assets/hero-bg.png')] h-screen relative">
         <div className="absolute inset-0 bg-black/40"></div>
-        <Container className="text-white absolute inset-0 flex flex-col justify-center items-center">
-          <div className="bg-slate-200/70 text-slate-900 px-40 py-20 rounded-md text-center flex flex-col gap-y-3 lg:gap-y-6">
+        <Container className="text-white  inset-0">
+          <div className="bg-slate-200/70 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/3 text-slate-900 px-40 py-20 rounded-md text-center flex flex-col gap-y-3 lg:gap-y-6">
             <p className="text-7xl ">
               Best food for <br /> your taste
             </p>
