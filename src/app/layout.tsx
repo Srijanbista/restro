@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import ContactRibbon from "@/components/ContactRibbon";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
         <ContactRibbon />
         <Navbar />
         <section className="overflow-y-auto">{children}</section>
+        <Footer />
       </body>
     </html>
   );
