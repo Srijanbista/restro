@@ -37,13 +37,13 @@ const Navbar = () => {
     },
   ];
   return (
-    <nav className="lg:py-4 fixed bg-white/60 z-[1002] w-full top-8 left-0 right-0 backdrop-blur-sm">
+    <nav className="lg:py-2 fixed bg-white/60 z-[1002] w-full top-8 left-0 right-0 backdrop-blur-sm">
       <Container className="flex justify-between items-center">
         <Link href="/" className="flex gap-x-3 lg:gap-x-6 items-center">
           <Image
             src={"/assets/icon-restaurant.png"}
-            height={75}
-            width={75}
+            height={70}
+            width={70}
             alt="Logo of Bistro Bliss"
             className="cursor-pointer"
           />
@@ -62,7 +62,7 @@ const Navbar = () => {
               <Link href={item.link}>{item.title}</Link>
             </li>
           ))}
-          <button className="text-2xl font-medium px-6 py-3 text-white bg-slate-800 rounded-md hover:text-gray-200 shadow-md hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-105">
+          <button className="text-xl font-medium px-6 py-3 text-white bg-slate-800 rounded-md hover:text-gray-200 shadow-md hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-105">
             Book A Table
           </button>
         </ul>
