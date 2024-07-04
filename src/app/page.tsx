@@ -52,7 +52,7 @@ export default function Home() {
 
       {/* Menu Section */}
       {HighLightCardData.length > 0 && (
-        <section className="h-screen py-32">
+        <section className="h-screen py-20">
           <Container className="flex flex-col gap-y-8 lg:gap-y-16">
             <p className="text-center text-5xl">Browse Our Menu</p>
             <div className="grid xl:grid-cols-4 gap-x-2 xl:gap-x-6 gap-y-2 xl:gap-y-6 ">
