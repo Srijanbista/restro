@@ -38,7 +38,7 @@ export default function Home() {
       <section className="bg-[url('/assets/hero-bg.png')] h-screen relative">
         <div className="absolute inset-0 bg-black/40"></div>
         <Container className="text-white  inset-0">
-          <div className="bg-slate-200/70 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/3 text-slate-900 px-40 py-20 rounded-md text-center flex flex-col gap-y-3 lg:gap-y-6">
+          <div className="bg-slate-200/70 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/3 text-slate-900 px-20 py-10 lg:px-40 lg:py-20 rounded-md text-center flex flex-col gap-y-3 lg:gap-y-6">
             <p className="text-7xl ">
               Best food for <br /> your taste
             </p>
@@ -52,13 +52,15 @@ export default function Home() {
 
       {/* Menu Section */}
       {HighLightCardData.length > 0 && (
-        <section className="h-screen py-20">
-          <Container className="flex flex-col gap-y-8 lg:gap-y-16">
-            <p className="text-center text-5xl">Browse Our Menu</p>
-            <div className="grid xl:grid-cols-4 gap-x-2 xl:gap-x-6 gap-y-2 xl:gap-y-6 ">
-              {HighLightCardData.map((item) => {
-                return <HighlightCard {...item} key={crypto.randomUUID()} />;
-              })}
+        <section className="py-28">
+          <Container>
+            <div className="flex flex-col gap-y-8 lg:gap-y-16">
+              <p className="text-center text-5xl">Browse Our Menu</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:gap-x-4 xl:grid-cols-4 gap-x-2 xl:gap-x-6 gap-y-2 md:gap-y-4 xl:gap-y-6 ">
+                {HighLightCardData.map((item) => {
+                  return <HighlightCard {...item} key={crypto.randomUUID()} />;
+                })}
+              </div>
             </div>
           </Container>
         </section>

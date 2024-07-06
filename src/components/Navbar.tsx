@@ -37,7 +37,7 @@ const Navbar = () => {
     },
   ];
   return (
-    <nav className="lg:py-2 fixed bg-white/60 z-[1002] w-full top-8 left-0 right-0 backdrop-blur-sm">
+    <nav className="hidden lg:block lg:py-2 fixed bg-white/60 z-[1002] w-full top-8 left-0 right-0 backdrop-blur-sm">
       <Container className="flex justify-between items-center">
         <Link href="/" className="flex gap-x-3 lg:gap-x-6 items-center">
           <Image
