@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ReactNode } from "react";
 import Container from "./Container";
+import { infoToast } from "./Toaster";
 
 export type NavItem = {
   title: string;
@@ -62,7 +63,10 @@ const Navbar = () => {
               <Link href={item.link}>{item.title}</Link>
             </li>
           ))}
-          <button className="text-xl font-medium px-6 py-3 text-white bg-slate-800 rounded-md hover:text-gray-200 shadow-md hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-105">
+          <button
+            className="text-xl font-medium px-6 py-3 text-white bg-slate-800 rounded-md hover:text-gray-200 shadow-md hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-105"
+            onClick={() => infoToast("Work In Progress")}
+          >
             Book A Table
           </button>
         </ul>

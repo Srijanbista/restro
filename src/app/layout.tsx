@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import ContactRibbon from "@/components/ContactRibbon";
 import Footer from "@/components/Footer";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="relative">
+        <Toaster />
         <ContactRibbon />
         <Navbar />
         <section className="overflow-y-auto">{children}</section>
