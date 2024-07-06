@@ -54,15 +54,13 @@ export default function Home() {
       {HighLightCardData.length > 0 && (
         <section className="py-7 lg:py-14">
           <ContainerWrapper>
-            <div className="flex flex-col gap-y-8 lg:gap-y-16">
-              <p className="text-center text-4xl lg:text-5xl">
-                Browse Our Menu
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-x-8 md:gap-x-12 xl:gap-x-16 gap-y-4 md:gap-y-6 xl:gap-y-8 ">
-                {HighLightCardData.map((item) => {
-                  return <HighlightCard {...item} key={crypto.randomUUID()} />;
-                })}
-              </div>
+            <p className="text-center text-4xl lg:text-5xl mb-8 xl:mb-16">
+              Browse Our Menu
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-x-8 md:gap-x-12 xl:gap-x-16 gap-y-4 md:gap-y-6 xl:gap-y-8 ">
+              {HighLightCardData.map((item) => {
+                return <HighlightCard {...item} key={crypto.randomUUID()} />;
+              })}
             </div>
           </ContainerWrapper>
         </section>
