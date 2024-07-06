@@ -1,4 +1,4 @@
-import Container from "@/components/Container";
+import ContainerWrapper from "@/components/Container";
 import HighlightCard from "@/components/HighlightCard";
 import { BsCupHot } from "react-icons/bs";
 import { LuDessert } from "react-icons/lu";
@@ -37,32 +37,34 @@ export default function Home() {
       {/* Hero Section */}
       <section className="bg-[url('/assets/hero-bg.png')] h-screen relative">
         <div className="absolute inset-0 bg-black/40"></div>
-        <Container className="text-white  inset-0">
-          <div className="bg-slate-200/70 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/3 text-slate-900 px-20 py-10 lg:px-40 lg:py-20 rounded-md text-center flex flex-col gap-y-3 lg:gap-y-6">
-            <p className="text-7xl ">
+        <ContainerWrapper className="text-white  inset-0">
+          <div className="bg-slate-200/70 w-[320px] sm:w-[400px] md:w-[640px] lg:w-[768px] xl:w-[1024px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/3 text-slate-900 px-10 py-5 md:px-20 md:py-10 lg:px-40 lg:py-20 rounded-md text-center flex flex-col gap-y-3 lg:gap-y-6">
+            <p className="text-3xl md:text-5xl lg:text-7xl">
               Best food for <br /> your taste
             </p>
-            <p className="text-sm font-medium">
+            <p className="text-xs md:text-sm lg:text-base xl:text-xl font-medium">
               Discover delectable cuisine and unforgettable moments <br /> in
               our welcoming, culinary haven.
             </p>
           </div>
-        </Container>
+        </ContainerWrapper>
       </section>
 
       {/* Menu Section */}
       {HighLightCardData.length > 0 && (
-        <section className="py-28">
-          <Container>
+        <section className="py-7 lg:py-14">
+          <ContainerWrapper>
             <div className="flex flex-col gap-y-8 lg:gap-y-16">
-              <p className="text-center text-5xl">Browse Our Menu</p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:gap-x-4 xl:grid-cols-4 gap-x-2 xl:gap-x-6 gap-y-2 md:gap-y-4 xl:gap-y-6 ">
+              <p className="text-center text-4xl lg:text-5xl">
+                Browse Our Menu
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-x-8 md:gap-x-12 xl:gap-x-16 gap-y-4 md:gap-y-6 xl:gap-y-8 ">
                 {HighLightCardData.map((item) => {
                   return <HighlightCard {...item} key={crypto.randomUUID()} />;
                 })}
               </div>
             </div>
-          </Container>
+          </ContainerWrapper>
         </section>
       )}
     </main>

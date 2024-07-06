@@ -37,7 +37,7 @@ const Navbar = () => {
     },
   ];
   return (
-    <nav className="hidden lg:block lg:py-2 fixed bg-white/60 z-[1002] w-full top-8 left-0 right-0 backdrop-blur-sm">
+    <nav className="hidden lg:block lg:py-2 fixed bg-white/60 z-[1002] w-full top-8 left-0 right-0 backdrop-blur-sm shadow">
       <Container className="flex justify-between items-center">
         <Link href="/" className="flex gap-x-3 lg:gap-x-6 items-center">
           <Image
@@ -55,7 +55,7 @@ const Navbar = () => {
           {navItems.map((item) => (
             <li
               className={`${
-                pathname === item.link && "font-bold"
+                pathname === item.link && "underline"
               } transition-all duration-300 ease-in-out cursor-pointer hover:text-slate-700`}
               key={item.title}
             >
