@@ -1,6 +1,6 @@
 import { HTMLAttributes, ReactNode } from "react";
 
-const Container = ({
+const ContainerWrapper = ({
   children,
   className,
 }: {
@@ -16,4 +16,4 @@ const Container = ({
   );
 };
 
-export default Container;
+export default ContainerWrapper;
