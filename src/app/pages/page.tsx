@@ -1,3 +1,3 @@
 export default function Pages() {
-  return <div>Pages</div>;
+  return <div className="pt-[120px]">Pages</div>;
 }
