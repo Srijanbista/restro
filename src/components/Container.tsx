@@ -2,7 +2,7 @@ import { HTMLAttributes, ReactNode } from "react";
 
 const ContainerWrapper = ({
   children,
-  className,
+  className = "",
 }: {
   children: ReactNode;
   className?: HTMLAttributes<HTMLDivElement>["className"];
