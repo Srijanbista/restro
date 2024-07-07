@@ -1,5 +1,11 @@
 import Link from "next/link";
 import Container from "./Container";
+import {
+  RiFacebookFill,
+  RiGithubFill,
+  RiInstagramFill,
+  RiTwitterXFill,
+} from "react-icons/ri";
 
 const Footer = () => {
   return (
@@ -15,7 +21,12 @@ const Footer = () => {
                 In the new era of technology we look <br /> in the future with
                 certainty and pride for <br /> our company.
               </p>
-              <p>Social Media</p>
+              <div className="flex gap-x-2">
+                <RiFacebookFill fill="white" />
+                <RiInstagramFill fill="white" />
+                <RiTwitterXFill fill="white" />
+                <RiGithubFill fill="white" />
+              </div>
             </div>
             <div className="flex flex-col gap-y-2 md:gap-y-3">
               <p className="text-xl font-semibold text-white">Pages</p>
