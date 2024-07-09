@@ -1,5 +1,6 @@
 import ContainerWrapper from "@/components/Container";
 import HighlightCard from "@/components/HighlightCard";
+import PrimaryButton from "@/components/PrimaryButton";
 import { BsCupHot } from "react-icons/bs";
 import { LuDessert } from "react-icons/lu";
 import { PiBowlFood } from "react-icons/pi";
@@ -38,7 +39,7 @@ export default function Home() {
       <section className="bg-[url('/assets/hero-bg.png')] h-screen relative">
         <div className="absolute inset-0 bg-black/40"></div>
         <ContainerWrapper className="text-white  inset-0">
-          <div className="bg-slate-200/70 w-[320px] sm:w-[400px] md:w-[640px] lg:w-[768px] xl:w-[1024px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/3 text-slate-900 px-10 py-5 md:px-20 md:py-10 lg:px-40 lg:py-20 rounded-md text-center flex flex-col gap-y-3 lg:gap-y-6">
+          <div className="bg-slate-200/70 w-[320px] sm:w-[400px] md:w-[640px] lg:w-[768px] xl:w-[1024px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/3 text-slate-900 px-10 py-5 md:px-20 md:py-10 lg:px-40 lg:py-20 rounded-md text-center flex flex-col items-center gap-y-3 lg:gap-y-6">
             <p className="text-3xl md:text-5xl lg:text-7xl">
               Best food for <br /> your taste
             </p>
@@ -46,13 +47,21 @@ export default function Home() {
               Discover delectable cuisine and unforgettable moments <br /> in
               our welcoming, culinary haven.
             </p>
+            <div className="flex gap-x-6 items-center">
+              <PrimaryButton label="Book A Table" />
+              <a href="#menuSection">
+                <button className="px-6 py-3  text-black font-semibold rounded-3xl border-black border hover:border-red-800 hover:bg-red-800 hover:text-white transition-colors duration-200 ease-in-out">
+                  Explore Menu
+                </button>
+              </a>
+            </div>
           </div>
         </ContainerWrapper>
       </section>
 
       {/* Menu Section */}
       {HighLightCardData.length > 0 && (
-        <section className="py-7 lg:py-14">
+        <section className="py-7 lg:py-14" id="menuSection">
           <ContainerWrapper>
             <p className="text-center text-4xl lg:text-5xl mb-8 xl:mb-16">
               Browse Our Menu
