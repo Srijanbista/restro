@@ -28,7 +28,7 @@ const Footer = () => {
                 <RiGithubFill fill="white" />
               </div>
             </div>
-            <div className="flex flex-col gap-y-2 md:gap-y-3">
+            <div className="flex flex-col gap-y-2 md:gap-y-3 text-sm">
               <p className="text-xl font-semibold text-white">Pages</p>
               <Link href="/">Home</Link>
               <Link href="/about">About</Link>
