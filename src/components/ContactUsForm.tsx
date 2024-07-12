@@ -2,13 +2,29 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import { HTMLInputTypeAttribute } from "react";
 import * as yup from "yup";
+import { errorToast, successToast } from "./Toaster";
 
-const ContactUsFormValidationSchema = yup.object().shape({
+export const ContactUsFormValidationSchema = yup.object().shape({
   name: yup.string().required("Name is required"),
   email: yup.string().email("Invalid email").required("Email is required"),
   message: yup.string().required("Message is required").min(20),
 });
 const ContactUsForm = () => {
+
+  const handleContactFormSubmit  = async(values:{name:string,email:string,message:string})=>{
+    try {
+      const resp = await fetch('api/email',{
+        method:'POST',
+        headers:{
+          'Content-Type':'application/json'
+        },
+        body:JSON.stringify(values)
+      })
+    } catch (error) {
+      
+    }
+  }
+
   return (
     <Formik
       initialValues={{
@@ -17,7 +33,12 @@ const ContactUsForm = () => {
         message: "",
       }}
       validationSchema={ContactUsFormValidationSchema}
-      onSubmit={(values: any) => console.log(values)}
+      onSubmit={(values:{name:string,email:string,message:string},{resetForm}) => {
+        handleContactFormSubmit(values)
+        .then(()=>successToast('Form Submitted Successfuly.'))
+        .catch(()=>errorToast('Error Submitting Form.'))
+        .finally(resetForm)
+      }}
     >
       {() => {
         return (
