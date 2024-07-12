@@ -13,7 +13,7 @@ export default function Contact() {
           </p>
         </ContainerWrapper>
       </section>
-      <section className="h-screen">
+      <section className="py-7 lg:py-14">
         <ContainerWrapper>
           <ContactUsForm />
         </ContainerWrapper>
