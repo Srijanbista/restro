@@ -45,11 +45,11 @@ const Navbar = () => {
             src={"/assets/icon-restaurant.png"}
             height={70}
             width={70}
-            alt="Logo of Bistro Bliss"
+            alt="Logo of Dine Sphere"
             className="cursor-pointer"
           />
           <span className="text-2xl font-light cursor-pointer">
-            Bistro Bliss
+            Dine Sphere
           </span>
         </Link>
         <ul className="flex flex-col lg:flex-row gap-y-20 gap-x-5 xl:gap-x-20 lg:justify-center text-xl items-center">
