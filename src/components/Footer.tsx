@@ -16,7 +16,7 @@ const Footer = () => {
             <div className="flex justify-between w-full">
               <div className="flex flex-col gap-y-2 md:gap-y-3">
                 <p className="text-3xl font-semibold italic text-white">
-                  Bistro Bliss
+                  Dine Sphere
                 </p>
                 <p className="text-sm text-slate-300">
                   In the new era of technology we look <br /> in the future with
